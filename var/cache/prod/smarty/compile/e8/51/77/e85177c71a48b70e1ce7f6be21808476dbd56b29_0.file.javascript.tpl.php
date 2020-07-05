@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-07-05 16:47:58
+/* Smarty version 3.1.33, created on 2020-07-05 18:39:21
   from '/opt/lampp/htdocs/ttprestashop/themes/javascript.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f01da0e4cb072_10719640',
+  'unifunc' => 'content_5f01f4299acd84_28631452',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f01da0e4cb072_10719640 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f01f4299acd84_28631452 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['js_def']->value) && is_array($_smarty_tpl->tpl_vars['js_def']->value) && count($_smarty_tpl->tpl_vars['js_def']->value)) {
 echo '<script'; ?>
  type="text/javascript">

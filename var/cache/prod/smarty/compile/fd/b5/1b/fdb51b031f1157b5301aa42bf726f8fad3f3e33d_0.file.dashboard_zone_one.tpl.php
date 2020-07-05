@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-07-05 17:30:30
+/* Smarty version 3.1.33, created on 2020-07-05 18:39:20
   from '/opt/lampp/htdocs/ttprestashop/modules/psaddonsconnect/views/templates/hook/dashboard_zone_one.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f01e40692d915_92405611',
+  'unifunc' => 'content_5f01f428349a76_34147013',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f01e40692d915_92405611 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f01f428349a76_34147013 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section id="psaddonsconnect" class="panel widget">
 	<div class="panel-heading">

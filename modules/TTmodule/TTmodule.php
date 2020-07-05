@@ -172,13 +172,13 @@ class TTmodule extends Module
                     array(
                         'col' => 1,
                         'type' => 'text',
-                        'name' => 'TTMODULE_number_1',
+                        'name' => 'TTMODULE_NUMBER_1',
                         'label' => 'Цена ОТ',
                     ),
                     array(
                         'col' => 1,
                         'type' => 'text',
-                        'name' => 'TTMODULE_number_2',
+                        'name' => 'TTMODULE_NUMBER_2',
                         'label' => 'Цена ДО',
                     ),
                 ),
@@ -195,9 +195,8 @@ class TTmodule extends Module
     protected function getConfigFormValues()
     {
         return array(
-            'TTMODULE_LIVE_MODE' => Configuration::get('TTMODULE_LIVE_MODE', true),
-            'TTMODULE_ACCOUNT_EMAIL' => Configuration::get('TTMODULE_ACCOUNT_EMAIL', 'contact@prestashop.com'),
-            'TTMODULE_ACCOUNT_PASSWORD' => Configuration::get('TTMODULE_ACCOUNT_PASSWORD', null),
+            'TTMODULE_NUMBER_1' => Configuration::get('TTMODULE_NUMBER_1', '0'),
+            'TTMODULE_NUMBER_2' => Configuration::get('TTMODULE_NUMBER_2', '999999999'),
         );
     }
 
