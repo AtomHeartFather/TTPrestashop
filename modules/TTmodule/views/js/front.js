@@ -25,3 +25,5 @@
 * Don't forget to prefix your containers with your own identifier
 * to avoid any conflicts with others containers.
 */
+var delay_popup = 500;
+setTimeout("document.getElementById('bg_popup').style.display='block'", delay_popup);

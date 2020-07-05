@@ -48,7 +48,7 @@ class TTmodule extends Module
         parent::__construct();
 
         $this->displayName = $this->l('Test Module');
-        $this->description = $this->l('Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module');
+        $this->description = $this->l('Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module _ Test Task Module');
 
         $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
     }
@@ -139,38 +139,6 @@ class TTmodule extends Module
                 'icon' => 'icon-cogs',
                 ),
                 'input' => array(
-                    /*array(
-                        'type' => 'switch',
-                        'label' => $this->l('Live mode'),
-                        'name' => 'TTMODULE_LIVE_MODE',
-                        'is_bool' => true,
-                        'desc' => $this->l('Use this module in live mode'),
-                        'values' => array(
-                            array(
-                                'id' => 'active_on',
-                                'value' => true,
-                                'label' => $this->l('Enabled')
-                            ),
-                            array(
-                                'id' => 'active_off',
-                                'value' => false,
-                                'label' => $this->l('Disabled')
-                            )
-                        ),
-                    ),
-                    array(
-                        'col' => 3,
-                        'type' => 'text',
-                        'prefix' => '<i class="icon icon-envelope"></i>',
-                        'desc' => $this->l('Enter a valid email address'),
-                        'name' => 'TTMODULE_ACCOUNT_EMAIL',
-                        'label' => $this->l('Email'),
-                    ),
-                    array(
-                        'type' => 'password',
-                        'name' => 'TTMODULE_ACCOUNT_PASSWORD',
-                        'label' => $this->l('Password'),
-                    ),*/
                     array(
                         'col' => 1,
                         'type' => 'text',
@@ -230,12 +198,29 @@ class TTmodule extends Module
      */
     public function hookHeader()
     {
-        $this->context->controller->addJS($this->_path.'/views/js/front.js');
-        $this->context->controller->addCSS($this->_path.'/views/css/front.css');
+        $this->context->controller->addJS($this->_path.'views/js/front.js');
+        $this->context->controller->addCSS($this->_path.'views/css/front.css');
     }
 
     public function hookDisplayFooter()
     {
-        /* Place your code here. */
+
+        $db = \Db::getInstance();
+        $TTMODULE_NUMBER_1 = Configuration::get('TTMODULE_NUMBER_1');
+        $TTMODULE_NUMBER_2 = Configuration::get('TTMODULE_NUMBER_2');
+        $request = 'SELECT COUNT(*) FROM `ps_product` WHERE `price` >= ' . $TTMODULE_NUMBER_1 . ' AND `price` <= ' . $TTMODULE_NUMBER_2 . '';
+        $productCount = $db->getValue($request);
+
+       
+        $this->context->smarty->assign([
+          'TTMODULE_COUNT' => $productCount,
+          'TTMODULE_NUMBER_1' => $TTMODULE_NUMBER_1,
+          'TTMODULE_NUMBER_2' => $TTMODULE_NUMBER_2,
+          'request' => $request,
+          'productCount' => $productCount
+        ]);
+
+        return $this->display(__FILE__, 'ttmodule.tpl');
+
     }
 }
