@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '127.0.0.1',
+    'database_port' => '',
+    'database_name' => 'ttprestashop',
+    'database_user' => 'root',
+    'database_password' => '',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => '6eBIsSQbUD0yy5NM74oMK6vx7jr7cfQB9Gq1PmyRg79XWoRNbbnmQZPh',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2020-07-05',
+    'locale' => 'ru-RU',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'wY1ficwtFqoWxdkKCnAsYwqamrxytnZadRGThsIAT99TTQZSqjqZN2jM',
+    'cookie_iv' => 'r8KQfArg',
+    'new_cookie_key' => 'def00000aedff45aae68cb0140f77d551ec2cdd28e0171f7922b6f7b747582ea9eb614d5a9c950de4ea1661a18ec7269afea299bf7883b9a37a598e68ee672daf67149b2',
+  ),
+);
