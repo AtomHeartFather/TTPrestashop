@@ -59,7 +59,8 @@ class TTmodule extends Module
      */
     public function install()
     {
-        Configuration::updateValue('TTMODULE_LIVE_MODE', false);
+        Configuration::updateValue('TTMODULE_NUMBER_1', '0');
+        Configuration::updateValue('TTMODULE_NUMBER_2', '999999999');
 
         include(dirname(__FILE__).'/sql/install.php');
 
@@ -71,7 +72,8 @@ class TTmodule extends Module
 
     public function uninstall()
     {
-        Configuration::deleteByName('TTMODULE_LIVE_MODE');
+        Configuration::deleteByName('TTMODULE_NUMBER_1');
+        Configuration::deleteByName('TTMODULE_NUMBER_2');
 
         include(dirname(__FILE__).'/sql/uninstall.php');
 
